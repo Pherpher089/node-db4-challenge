@@ -30,15 +30,15 @@ exports.up = function(knex) {
 				.integer("ingredience_id")
 				.unsigned()
 				.notNullable()
-				.references("recipie_id")
+				.references("ingredient_id")
 				.inTable("ingredience");
 		});
 };
 
 exports.down = function(knex) {
 	return knex.schema
-		.dropIfTableExists("recipie-ingredience")
-		.dropIfTableExists("ingredience")
-		.dropIfTableExists("steps")
-		.dropIfTableExists("recipies");
+		.dropTableIfExists("recipie-ingredience")
+		.dropTableIfExists("ingredience")
+		.dropTableIfExists("steps")
+		.dropTableIfExists("recipies");
 };

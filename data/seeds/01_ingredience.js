@@ -13,7 +13,7 @@ exports.seed = function(knex) {
 				{ ingredient_name: "Jelly" },
 				{ ingredient_name: "Spagetti Sause" },
 				{ ingredient_name: "Cheese Sause" },
-				{ ingredient_name: "Mixed Vegitables" },
+				{ ingredient_name: "Mixed vegitables" },
 			]);
 		});
 };

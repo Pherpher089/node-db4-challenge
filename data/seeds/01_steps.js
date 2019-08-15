@@ -1,12 +1,12 @@
 exports.seed = function(knex) {
 	// Deletes ALL existing entries
 	return knex("steps")
-		.del()
+		.truncate()
 		.then(function() {
 			// Inserts seed entries
 			return knex("steps").insert([
 				{
-					recipie_id: 0,
+					recipie_id: 1,
 					step_description: "Spread jelly on bread",
 					step_order: 1,
 				},

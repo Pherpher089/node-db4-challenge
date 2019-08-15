@@ -6,18 +6,19 @@ module.exports = {
 			filename: "./data/cook-book.db3",
 		},
 		useNullAsDefault: true,
-	},
-	pool: {
-		afterCreate: (conn, done) => {
-			conn.run("PRAGMA forein_keys = ON", done); //Turn on FK enforcment
+
+		migrations: {
+			directory: "./data/migrations",
 		},
-	},
-
-	migrations: {
-		directory: "./data/migrations",
-	},
-
-	seeds: {
-		directory: "./data/seeds",
+		seeds: {
+			directory: "./data/seeds",
+		},
+		// add the following
+		pool: {
+			afterCreate: (conn, done) => {
+				// runs after a connection is made to the sqlite engine
+				conn.run("PRAGMA foreign_keys = ON", done); // turn on FK enforcement
+			},
+		},
 	},
 };
