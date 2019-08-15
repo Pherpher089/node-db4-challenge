@@ -1,4 +1,4 @@
 {
-    "editor.formatOnPaste": true,
-    "editor.formatOnType": true
+	"editor.formatOnPaste": true,
+	"editor.formatOnType": true
 }
